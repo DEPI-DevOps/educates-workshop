@@ -10,7 +10,7 @@ spec:
   workshop:
     files:
     - image:
-        url: "$(image_repository)/test-lab-files:latest"
+        url: "ghcr.io/depi-devops/test-lab-files:latest"
       includePaths:
       - /workshop/**
       - /exercises/**
@@ -24,7 +24,7 @@ spec:
       editor:
         enabled: true
       docker:
-        enabled: false
+        enabled: true
       examiner:
         enabled: true
       registry:
