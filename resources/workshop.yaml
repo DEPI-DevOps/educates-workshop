@@ -5,12 +5,13 @@ metadata:
 spec:
   title: "Workshop"
   description: "Workshop description."
-  publish:
-    image: "$(image_repository)/test-lab-files:latest"
+  # publish:
+  #   image: "ghcr.io/DEPI-DevOps/test-lab-files:latest"
   workshop:
     files:
-    - image:
-        url: "$(image_repository)/test-lab-files:latest"
+    - git:
+        url: https://github.com/DEPI-DevOps/educates-workshop
+        ref: origin/main
       includePaths:
       - /workshop/**
       - /exercises/**
