@@ -10,7 +10,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Create release
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.CR_PAT }}
+
+      - name: Publish Workshop
         uses: educates/educates-github-actions/publish-workshop@v7
         with:
-          token: ${{secrets.GITHUB_TOKEN}}
+          token: ${{ secrets.CR_PAT }}  # Use PAT instead of GITHUB_TOKEN
