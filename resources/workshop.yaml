@@ -6,11 +6,11 @@ spec:
   title: "Workshop"
   description: "Workshop description."
   publish:
-    image: "docker.io/sh3b0/test-lab-files:latest"
+    image: "$(image_repository)/test-lab-files:latest"
   workshop:
     files:
     - image:
-        url: "docker.io/sh3b0/test-lab-files:latest"
+        url: "$(image_repository)/test-lab-files:latest"
       includePaths:
       - /workshop/**
       - /exercises/**
