@@ -1,0 +1,16 @@
+name: Publish Workshop
+
+on:
+  push:
+
+jobs:
+  publish-workshop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create release
+        uses: educates/educates-github-actions/publish-workshop@v7
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
