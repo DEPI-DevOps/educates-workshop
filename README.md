@@ -1,3 +1,3 @@
-# Workshop
+# Sample Workshop
 
-Workshop description
+Testing out educates.dev
