@@ -23,7 +23,7 @@ spec:
       terminal:
         enabled: true
       editor:
-        enabled: true
+        enabled: false
       docker:
         enabled: true
       examiner:
