@@ -2,6 +2,8 @@ name: Publish Workshop
 
 on:
   push:
+    tags:
+      - "v[0-9]+"
 
 jobs:
   publish-workshop:
@@ -20,4 +22,4 @@ jobs:
       - name: Publish Workshop
         uses: educates/educates-github-actions/publish-workshop@v7
         with:
-          token: ${{ secrets.CR_PAT }}  # Use PAT instead of GITHUB_TOKEN
+          token: ${{ secrets.CR_PAT }}
