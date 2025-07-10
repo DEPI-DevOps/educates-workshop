@@ -1,7 +1,7 @@
 apiVersion: training.educates.dev/v1beta1
 kind: Workshop
 metadata:
-  name: "test-lab"
+  name: "recorder"
 spec:
   title: "Workshop"
   description: "Workshop description."

@@ -1,4 +1,6 @@
-# Sample Workshop
+# Educates Workshop
+
+Demo on integrating asciicinema with educates to record student sessions.
 
 1. Install Educates CLI
 
