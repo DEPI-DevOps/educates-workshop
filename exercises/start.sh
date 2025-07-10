@@ -2,14 +2,8 @@
 
 read -r -p "Enter username to set as hostname: " HOSTNAME
 
-if [ -n "$HOSTNAME" ]; then
-    echo "$HOSTNAME" | sudo tee /etc/hostname >/dev/null
-    echo "127.0.0.1 $HOSTNAME" | sudo tee -a /etc/hosts >/dev/null
-    sudo hostname "$HOSTNAME"
-fi
+export USER="$HOSTNAME"
+export SHELL="/bin/bash"
 
-export USER=$HOSTNAME
-export TERM=xterm
-export SHELL="/bin/fish"
-
-asciinema rec -i 1 -c '/bin/fish'
+echo 'PS1="\[\e[1;32m\]\u@$HOSTNAME\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]\$ "' > /tmp/prompt
+asciinema rec -i 1 -c "bash --rcfile /tmp/prompt"

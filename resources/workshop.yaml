@@ -3,8 +3,8 @@ kind: Workshop
 metadata:
   name: "recorder"
 spec:
-  title: "Workshop"
-  description: "Workshop description."
+  title: "Recorder"
+  description: "Demo on integrating asciinema with educates to record student sessions."
   publish:
     image: "ghcr.io/sh3b0/recorder-files:latest"
   workshop:
